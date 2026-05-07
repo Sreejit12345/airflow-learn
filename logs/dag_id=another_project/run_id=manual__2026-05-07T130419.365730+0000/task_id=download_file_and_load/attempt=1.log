@@ -1,0 +1,16 @@
+{"timestamp":"2026-05-07T13:05:42.475693Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-07T13:05:42.483331Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/another_project_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-07T13:05:43.771363Z","level":"warning","event":"The `airflow.sensors.base.PokeReturnValue` attribute is deprecated. Please use `'airflow.sdk.bases.sensor.PokeReturnValue'`.","category":"UserWarning","filename":"/opt/airflow/dags/another_project_dag.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-05-07T13:05:43.771823Z","level":"warning","event":"The `airflow.utils.operator_helpers.determine_kwargs` attribute is deprecated. Please use `'airflow.sdk.bases.decorator.determine_kwargs'`.","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/sensors/python.py","lineno":24,"logger":"py.warnings"}
+{"timestamp":"2026-05-07T13:05:43.839838Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:43.841273Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:43.845116Z","level":"info","event":"Current task name:download_file_and_load","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:43.846261Z","level":"info","event":"Dag name:another_project","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:44.165390Z","level":"info","event":"listing files....","logger":"root","filename":"aws_boto_ex.py","lineno":53}
+{"timestamp":"2026-05-07T13:05:44.192074Z","level":"info","event":"downloading file.....op/part-00000-8510b1aa-26c7-442c-85da-e9f070943bce-c000.csv","logger":"root","filename":"aws_boto_ex.py","lineno":64}
+{"timestamp":"2026-05-07T13:05:44.229472Z","level":"info","event":"file downloaded    op/part-00000-8510b1aa-26c7-442c-85da-e9f070943bce-c000.csv","logger":"root","filename":"aws_boto_ex.py","lineno":68}
+{"timestamp":"2026-05-07T13:05:44.230046Z","level":"info","event":"Running copy expert: \n        COPY apple_stock(date, up,down)\n        FROM STDIN\n        WITH CSV HEADER\n        , filename: /tmp/spark_op.csv","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"postgres.py","lineno":365}
+{"timestamp":"2026-05-07T13:05:54.635163Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-07T13:05:54.710260Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:54.713010Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-07T13:05:54.715108Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): download_file_and_load>","logger":"task.stdout"}

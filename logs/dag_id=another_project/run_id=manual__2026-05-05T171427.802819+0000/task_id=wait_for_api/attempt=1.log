@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-05T17:14:32.693399Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-05T17:14:32.698585Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/another_project_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-05T17:14:33.996131Z","level":"warning","event":"The `airflow.sensors.base.PokeReturnValue` attribute is deprecated. Please use `'airflow.sdk.bases.sensor.PokeReturnValue'`.","category":"UserWarning","filename":"/opt/airflow/dags/another_project_dag.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-05-05T17:14:33.996655Z","level":"warning","event":"The `airflow.utils.operator_helpers.determine_kwargs` attribute is deprecated. Please use `'airflow.sdk.bases.decorator.determine_kwargs'`.","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/sensors/python.py","lineno":24,"logger":"py.warnings"}
+{"timestamp":"2026-05-05T17:14:34.106982Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:34.108107Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:34.109376Z","level":"info","event":"Current task name:wait_for_api","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:34.110324Z","level":"info","event":"Dag name:another_project","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:34.109685Z","level":"info","event":"Poking callable: <function generate_dag.<locals>.wait_for_api at 0x75257f29a700>","logger":"airflow.task.operators.airflow.providers.standard.decorators.sensor.DecoratedSensorOperator","filename":"python.py","lineno":75}
+{"timestamp":"2026-05-05T17:14:43.248482Z","level":"info","event":"Success criteria met. Exiting.","logger":"airflow.task.operators.airflow.providers.standard.decorators.sensor.DecoratedSensorOperator","filename":"sensor.py","lineno":248}
+{"timestamp":"2026-05-05T17:14:43.383246Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:43.385018Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-05T17:14:43.388416Z","level":"info","event":"Task operator:<Task(DecoratedSensorOperator): wait_for_api>","logger":"task.stdout"}
