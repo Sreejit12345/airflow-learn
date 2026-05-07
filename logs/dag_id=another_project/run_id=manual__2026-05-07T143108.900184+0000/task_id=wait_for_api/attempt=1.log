@@ -1,0 +1,18 @@
+{"timestamp":"2026-05-07T14:31:17.837482Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-07T14:31:17.849177Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/another_project_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-07T14:31:20.966643Z","level":"warning","event":"The `airflow.sensors.base.PokeReturnValue` attribute is deprecated. Please use `'airflow.sdk.bases.sensor.PokeReturnValue'`.","category":"UserWarning","filename":"/opt/airflow/dags/another_project_dag.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-05-07T14:31:20.967331Z","level":"warning","event":"The `airflow.utils.operator_helpers.determine_kwargs` attribute is deprecated. Please use `'airflow.sdk.bases.decorator.determine_kwargs'`.","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/sensors/python.py","lineno":24,"logger":"py.warnings"}
+{"timestamp":"2026-05-07T14:31:21.238816Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:21.240389Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:21.241800Z","level":"info","event":"Current task name:wait_for_api","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:21.242937Z","level":"info","event":"Dag name:another_project","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:21.243000Z","level":"info","event":"Poking callable: <function generate_dag.<locals>.wait_for_api at 0x7e116e0e2840>","logger":"airflow.task.operators.airflow.providers.standard.decorators.sensor.DecoratedSensorOperator","filename":"python.py","lineno":75}
+{"timestamp":"2026-05-07T14:31:21.928742Z","level":"info","event":"Bucket already exists","logger":"root","filename":"aws_boto_ex.py","lineno":28}
+{"timestamp":"2026-05-07T14:31:21.930641Z","level":"info","event":"Calling API ....","logger":"root","filename":"aws_boto_ex.py","lineno":40}
+{"timestamp":"2026-05-07T14:31:28.456988Z","level":"error","event":"\r[*********************100%***********************]  1 of 1 completed","logger":"task.stderr"}
+{"timestamp":"2026-05-07T14:31:28.503023Z","level":"info","event":"File downloaded from API successfully ","logger":"root","filename":"aws_boto_ex.py","lineno":44}
+{"timestamp":"2026-05-07T14:31:28.723368Z","level":"info","event":"File uploaded successfully","logger":"root","filename":"aws_boto_ex.py","lineno":48}
+{"timestamp":"2026-05-07T14:31:28.730341Z","level":"info","event":"Success criteria met. Exiting.","logger":"airflow.task.operators.airflow.providers.standard.decorators.sensor.DecoratedSensorOperator","filename":"sensor.py","lineno":248}
+{"timestamp":"2026-05-07T14:31:28.927493Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:28.934022Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-07T14:31:28.939964Z","level":"info","event":"Task operator:<Task(DecoratedSensorOperator): wait_for_api>","logger":"task.stdout"}

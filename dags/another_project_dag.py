@@ -6,8 +6,34 @@ from airflow.sensors.base import PokeReturnValue
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+from airflow.providers.smtp.notifications.smtp import SmtpNotifier
 
-@dag(dag_id='another_project',schedule='@daily')
+
+
+# we created smtp conn in airflow with:
+
+'''
+    name: email_conn
+    host: smtp.gmail.com
+    login: hellothisissreejit@gmail.com
+    port: 587
+    password- app password generated from gmail
+
+'''
+@dag(dag_id='another_project',schedule='@daily',
+     on_success_callback=SmtpNotifier(
+        smtp_conn_id ='email_conn',
+        from_email="hellothisissreejit@gmail.com",
+        to="hellothisissreejit@gmail.com",
+        subject="DAG successful"),
+        
+    on_failure_callback=SmtpNotifier(
+        smtp_conn_id ='email_conn',
+        from_email="hellothisissreejit@gmail.com",
+        to="hellothisissreejit@gmail.com",
+        subject="DAG failed"))
+
+
 def generate_dag():
 
     # this fn runs every 60 secs for max total run of 300 secs and returns true if successful
